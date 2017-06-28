@@ -1,0 +1,21 @@
+<html>
+<head>
+	<title>assignment 2</title>
+</head>
+<script type="text/JavaScript">
+function myFunction(){
+	int_first=document.getElementById("first").value;
+	int_second=document.getElementById("second").value;
+	add=Number(int_first)+Number(int_second);
+	result=add;
+document.getElementById("result").innerHTML=add;
+}
+</script>
+<body>
+firstno:<input text="text"placeholder="1st no."id="first"><br></br>
+secondno:<input text="text"placeholder="2nd no."id="second"><br></br>
+<input type="button"value="add"id="click"onClick="myFunction()">
+<label id="result"></label>
+
+</body>
+</html>

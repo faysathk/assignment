@@ -1,0 +1,85 @@
+<html>
+<head> <title> customer registretion </title>
+<script>
+function validate(){
+	name=document.form1.txt_customer_name.value;
+	if(name=="")
+	{
+		alert("Please enter your name:");
+		return false;
+	}
+	pass=document.form1.txt_password_name.value;
+	if(pass=="")
+	{
+		alert("please enter your password");
+	    return false;
+	}
+	email=document.form1.txt_emailid_name.value;
+	if(email=="")
+	{
+		alert("please enter your emailid");
+		return false;
+	}
+	male=document.form1.radio_gender[0].checked;
+	female=document.form1.radio_gender[1].checked;
+
+	if(!(male||female))
+	{
+		alert("please enter your gender");
+		return false;
+	}
+	address=document.form1.txt_address_name.value;
+	if(address=="")
+	{
+		alert("please enter your address");
+		return false;
+	}
+	telephone=document.form1.txt_telephone_name.value;
+	if(telephone=="")
+	{
+		alert("please enter your telephone no.");
+		return false;
+	}
+	hobbies=document.form1.txt_hobbies_name.value;
+	if(hobbies=="")
+	{
+		alert("please enter your hobby");
+		return false;
+	}
+}
+</script>
+</head>
+<body>
+     
+     	
+     		<form name="form1" action="www.google.com" method="get">
+     		
+     			<table>
+     				<tr>
+     				<td colspan ="2" >
+     			<h1> CUSTOMER REGISTERATION </h1>
+     				</td></tr>
+     				<tr><td>customer name :</td><td> <input type="text "name="txt_customer_name"></td></tr>
+     				<tr><td>pass word :</td><td><input type="text"name="txt_password_name"></td></tr>
+     					<tr><td>Email ID :</td><td><input type="text"name="txt_emailid_name"></td></tr>
+     				<tr><td>gender :</td><td><input type="radio"name="radio_gender">male <input type="radio"name="radio_gender" >female </td></tr>
+     				<tr><td>address :</td><td><input type="text"name="txt_address_name"></td></tr>
+     				<tr><td>telephone no:</td><td><input type="text"name="txt_telephone_name"></td></tr>
+     				<tr><td>hobbies :</td><td><select>
+                              <option value="reading">select</option>
+                              <option value="reading">reading</option>
+                              <option vlue="writing">writing</option>
+                              <option vlue="playing">playing</option>
+                              <option value="travelling" >traveling</optin><br>
+                              <input type="submit"value="submit"onClick="return validate();">
+                              <script>
+                              function return validate(){
+                              	var x=document.getElemantById("option value").selectedIndex;
+                              	alert(x);
+                              }
+                              </script>
+                              	<br></tr>
+                              </form>     	
+     	</table>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+<head><title>pseudo</title>
+	<link rel="stylesheet" type="text/css" href="main.css"/>
+	<style type="main/css">
+	</head>
+	
+
+
+li { border-bottom: 1px solid #eee; font-size: 14px; list-style: none; padding: 10px 0 10px 40px; position: relative; }
+
+ul.second-example li:before {
+	content: '';
+	background: url(new arr.jpg) no-repeat left top;
+	height: 20px;
+	width: 20px;
+	position: absolute;
+	left: 0;
+	top: 8px;
+}
+
+ul.second-example li:nth-child(2n):before {
+	background-position: -21px 0;
+}
+</style>
+<body>
+<ul class="second-example">
+	<li>SEO</li>
+	<li>Content Management System</li>
+	<li>Social Network Integration</li>
+	<li>Another list item for emphasis</li>
+</ul>
+</body>
+</html>

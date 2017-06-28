@@ -1,0 +1,79 @@
+<html>
+<head>
+     <title> MY WEBSITE </title>
+     </head>
+	<script src="js/jquery-3.2.1.js"></script>
+<script src="js/script.js"></script>
+
+     
+<body>
+	<table width="100%" cellspacing="0">
+		<tr bgcolor="#3b5998">
+			<td width="55%"> <img src="logo.png" width="220"></td>
+			<td align="left"> <input type="text"placeholder="email@gmail.com"id="email"><input type="text"placeholder="password"id="password">
+				<input type="button" value="LOGIN"id="login">
+			</td>
+		</tr>
+		</td>
+		<tr bgcolor="#EDF0F5"HEIGHT="600PX">
+		<TD VALIGN="TOP" ALIGN="CENTER"	><BR><BR>
+		<TABLE BORDER="0" WIDTH="80%">
+		<TR>
+		<TD><H2><font face ="verdana">connect with friends and the world arround you on facebook.</font></h2></td>
+		</tr>
+		<tr>
+		<td><font face="verdana"><br>
+		<img src="download.png"width ="45px"height="30">&nbsp;&nbsp;see fotos and updates from friends in news feed.<br></br>
+		<img src="pc-computer-with-monitor_318-50338.jpg"width ="45px"height="30">&nbsp;&nbsp;share whats new in yourlife on your  timeline <br><br>
+		<img src="pc man or.png"width="45px"height="30">&nbsp;&nbsp;fimd more of you what you are looking for with graph search <br>
+		</font>
+		</td> 
+		</tr>
+</table>
+			<td valign="top"align="center">
+			<h1> sign up </h1>
+			<table boarder="0" cellspacing="10">
+			<tr>
+			<td> <input type="text"placeholder="first name"style ="height;30px"size="30"></td>
+					</tr>
+					<tr>
+						<td colspan="2"><input type="text"size="60"place holder="mobile number"style="height":40px></td>
+					</tr>
+					<tr>
+						<td colspan="2"><input type ="text"size="60"placeholder="email"style=height:40px></td>
+					</tr><tr>
+					<td colspan="2"><input type ="text"size="60"placeholder="pass word"style=height:40px></td>
+				</tr>
+				<tr>
+					<td colspan="2"><font color="#666666"face="verdana,ariel,helvetica,sans=-serif"size="1"> by clicking sign up,you agree to our terms and that you have read our data use policy,including our cookie using.</font></td>
+				</tr>
+				<tr>
+					<td colspan="2"><img src="download.png" width="140"></td>
+					</tr>
+			</table>
+</body>
+</html>
+$(document).ready(function(){
+   
+	$("#login").click(function(){
+   var e= $("#email").val();
+   var p= $("#password").val();
+   $.ajax({
+   	url:"http://services.trainees.baabtra.com/LoginService/login.php",
+   	data:{
+   		email:e,
+   		password:p
+   	},
+      dataType :"json",
+   	success: function(response){
+         if(response[0].ResponseCode==200)
+   {
+      window.location.replace("home.html");
+   }
+   else{
+      window.location.replace("login_error.html");
+   }
+   	}
+    });
+   });
+});
